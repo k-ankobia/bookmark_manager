@@ -2,8 +2,11 @@ require 'pg'
 
 class Bookmark
   def self.all
-    connectDP = PG.connect(dbname: 'bookmark_manager') # connect to bookmark_manager
-    results = connectDP.exec('SELECT * FROM bookmarks;') #selects bookmarks table
+    connection = PG.connect(dbname: 'bookmark_manager') # connect to bookmark_manager
+    query = 'SELECT * FROM bookmarks;'
+    results = connection.exec(query) #selects bookmarks table
+    p 'results'
+    p results
     results.map do |url_links|
       url_links["url"]
   end

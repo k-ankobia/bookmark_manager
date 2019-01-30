@@ -5,6 +5,7 @@ class App < Sinatra::Base
 
   get '/' do
     'Welcome to the Bookmarker'
+    erb :'index'
   end
 
   get '/bookmarks' do
