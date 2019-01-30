@@ -1,12 +1,18 @@
 require 'bookmark'
+require 'web_helper.rb'
 
 describe Bookmark do
+  before :each do
+  Webhelper.reset
+  Webhelper.add_dummy_data
+  end
+
   describe '.all' do
+    # let (:bookmark) {double :bookmark}
+
     it 'returns all bookmarks' do
       bookmarks = Bookmark.all
-
       expect(bookmarks).to include('http://www.google.com')
-      # expect(bookmarks).to include('http://www.bbc.co.uk')
     end
   end
 end

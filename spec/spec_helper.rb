@@ -4,6 +4,8 @@ require 'simplecov-console'
 require './app'
 
 ENV['RACK_ENV'] = 'test'
+ENV['DATABASE'] = 'bookmark_manager_test'
+
 
 Capybara.app = App
 
