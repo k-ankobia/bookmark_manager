@@ -1,6 +1,19 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/apple/Projects/Challenges/bookmark_manager/spec/feature/add_bookmark_feature_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
       "/Users/apple/Projects/Challenges/bookmark_manager/spec/feature/feature_test_spec.rb": [
         1,
         null,
@@ -90,6 +103,6 @@
         null
       ]
     },
-    "timestamp": 1548942522
+    "timestamp": 1548943757
   }
 }
