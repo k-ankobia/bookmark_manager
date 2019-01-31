@@ -2,25 +2,21 @@ require 'sinatra/base'
 require_relative './lib/bookmark'
 require 'dotenv/load'
 
-
 class App < Sinatra::Base
-
   get '/' do
-    'Welcome to the Bookmarker'
-    erb :'index'
+    erb :index
   end
 
   get '/bookmarks' do
     @bookmarks = Bookmark.all
-    p @bookmarks
     erb :'bookmarks/index'
   end
 
   post '/add_bookmark' do
     url = params['url']
-    p params
-    Bookmark.add_bookmark(url)
+    title = params['title']
+    Bookmark.add_bookmark(url, title)
     redirect '/bookmarks'
   end
-  run! if app_file == $0
+  run! if app_file == $PROGRAM_NAME
 end
