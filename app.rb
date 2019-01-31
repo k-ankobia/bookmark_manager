@@ -1,5 +1,7 @@
 require 'sinatra/base'
 require_relative './lib/bookmark'
+require 'dotenv/load'
+
 
 class App < Sinatra::Base
 
@@ -9,6 +11,8 @@ class App < Sinatra::Base
   end
 
   get '/bookmarks' do
+    p '-------------'
+   p ENV['DATABASE']
     @bookmarks = Bookmark.all
     erb :'bookmarks/index'
   end
