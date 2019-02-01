@@ -1,4 +1,5 @@
 require 'pg'
+require 'dotenv/load'
 
 class Bookmark
   def self.all
@@ -10,9 +11,9 @@ class Bookmark
     end
   end
 
-  def self.add_bookmark(url, title)
-    connection = PG.connect(dbname: ENV['DATABASE'])
-    query = "INSERT INTO bookmarks(url, title) VALUES('#{url}', '#{title}');"
-    connection.exec(query)
-  end
+    def self.add_bookmark(url)
+      connection = PG.connect(dbname: ENV['DATABASE'])
+      query = "INSERT INTO bookmarks(url) VALUES('#{url}');"
+      connection.exec(query)
+    end
 end

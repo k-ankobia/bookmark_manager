@@ -11,4 +11,6 @@ group :test, :development do
   gem 'rubocop'
   gem 'simplecov'
   gem 'simplecov-console'
+  gem 'ruby-debug-ide'
+  gem 'debase'
 end

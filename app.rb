@@ -1,6 +1,5 @@
 require 'sinatra/base'
 require_relative './lib/bookmark'
-require 'dotenv/load'
 
 class App < Sinatra::Base
   get '/' do
@@ -14,8 +13,12 @@ class App < Sinatra::Base
 
   post '/add_bookmark' do
     url = params['url']
+<<<<<<< HEAD
     title = params['title']
     Bookmark.add_bookmark(url, title)
+=======
+    Bookmark.add_bookmark(url)
+>>>>>>> testingv2
     redirect '/bookmarks'
   end
   run! if app_file == $PROGRAM_NAME

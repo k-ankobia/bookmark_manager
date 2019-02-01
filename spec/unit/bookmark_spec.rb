@@ -3,8 +3,8 @@ require 'web_helper.rb'
 
 describe Bookmark do
   before :each do
-  Webhelper.reset
-  Webhelper.add_dummy_data
+    Webhelper.reset
+    Webhelper.add_dummy_data
   end
 
   describe '.all' do
@@ -12,7 +12,8 @@ describe Bookmark do
 
     it 'returns all bookmarks' do
       bookmarks = Bookmark.all
-      expect(bookmarks).to include('http://www.google.com')
+      expect(bookmarks).to include
+      ('http://www.yahoo.com')
     end
   end
 end

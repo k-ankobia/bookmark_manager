@@ -7,7 +7,6 @@ RSpec.describe App do
 
   scenario 'confirms we can view bookmarks' do
     visit('/bookmarks')
-    # save_and_open_page
-    expect(page).to have_content("http://www.google.com")
+    expect(page).to have_content("http://www.yahoo.com")
   end
 end
