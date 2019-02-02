@@ -1,7 +1,7 @@
 module Webhelper
   def self.reset
     connection = PG.connect(dbname: ENV['DATABASE'])
-    result = connection.exec('TRUNCATE TABLE bookmarks;')
+    result = connection.exec('TRUNCATE bookmarks;')
   end
 
   def self.add_dummy_data
