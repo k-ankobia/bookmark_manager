@@ -8,12 +8,16 @@ describe Bookmark do
   end
 
   describe '.all' do
-    # let (:bookmark) {double :bookmark}
-
     it 'returns all bookmarks' do
       bookmarks = Bookmark.all
-      expect(bookmarks).to include
-      ('http://www.yahoo.com')
+      expect(bookmarks).to include('http://www.yahoo.com')
+    end
+  end
+
+  describe '.create' do
+    it 'adds new bookmark to table' do
+      Bookmark.create(url: 'http://www.testbookmark.com')
+      expect(Bookmark.all).to include 'http://www.testbookmark.com'
     end
   end
 end

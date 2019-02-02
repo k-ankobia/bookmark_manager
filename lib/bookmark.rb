@@ -11,7 +11,7 @@ class Bookmark
     end
   end
 
-    def self.add_bookmark(url)
+    def self.create(url:)
       connection = PG.connect(dbname: ENV['DATABASE'])
       query = "INSERT INTO bookmarks(url) VALUES('#{url}');"
       connection.exec(query)

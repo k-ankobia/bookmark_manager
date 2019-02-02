@@ -12,8 +12,7 @@ class App < Sinatra::Base
   end
 
   post '/add_bookmark' do
-    url = params['url']
-    Bookmark.add_bookmark(url)
+    Bookmark.create(url: params[:url])
     redirect '/bookmarks'
   end
   run! if app_file == $PROGRAM_NAME

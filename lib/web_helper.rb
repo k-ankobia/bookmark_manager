@@ -1,5 +1,4 @@
 module Webhelper
-  def self.sign_in; end
 
   def self.reset
     connection = PG.connect(dbname: ENV['DATABASE'])

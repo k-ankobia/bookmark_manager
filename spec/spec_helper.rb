@@ -3,7 +3,6 @@ require 'simplecov'
 require 'simplecov-console'
 require './app'
 
-ENV['RACK_ENV'] = 'test'
 ENV['DATABASE'] = 'bookmark_manager_test'
 
 # save_and_open_page('./capybara/file.html')
