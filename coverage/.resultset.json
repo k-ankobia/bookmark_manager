@@ -10,6 +10,7 @@
         1,
         1,
         1,
+        1,
         null,
         null
       ],
@@ -51,13 +52,13 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null
       ],
       "/Users/apple/Projects/Challenges/bookmark_manager/lib/web_helper.rb": [
         1,
-        null,
         1,
         2,
         2,
@@ -70,6 +71,6 @@
         null
       ]
     },
-    "timestamp": 1549121939
+    "timestamp": 1549125187
   }
 }
